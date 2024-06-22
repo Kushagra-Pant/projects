@@ -3,6 +3,7 @@ body{
 }
 h1{
     font-size: 40px;
+    color: black;
 }
 .section{
     border-radius: 10px;
@@ -58,7 +59,7 @@ p{
     font-size: 19.5px;
 }
 a:hover{
-    text-decoration: underline black;
+    text-decoration: 1px underline black;
 }
 #head{
     font-size: 1.2em;
