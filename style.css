@@ -1,0 +1,65 @@
+body{
+    text-align: center;
+}
+h1{
+    font-size: 40px;
+}
+.section{
+    border-radius: 10px;
+    border-color: black;
+    margin: 10px;
+    padding-bottom: 10px;
+    border: 1px solid;
+    width: 400px;
+    display: block;
+}
+h2{
+    color: black;
+    margin-bottom: 5px;
+}
+h3{
+    margin-top: 5px;
+    color: gray;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 16.5px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+.desc{
+    border-bottom: 1px solid;
+    border-color: rgb(160, 160, 160);
+    padding-bottom: 5px;
+    margin-bottom: 0px;
+    font-size: 16px;
+    margin: 10px;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+button{
+    margin-left: 30px;
+    height: 25px;
+    background-image: url(git.png);
+    background-size: contain;
+    background-position: center;
+    border: 1px solid;
+    border-radius: 5px;
+}
+button:hover{
+    opacity: 50%;
+}
+p{
+    color: black;
+    margin: 5px;
+    font-size: 19.5px;
+}
+a:hover{
+    text-decoration: underline black;
+}
+#head{
+    font-size: 1.2em;
+}
