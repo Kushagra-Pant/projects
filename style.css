@@ -1,6 +1,6 @@
-
 body{
     text-align: center;
+    font-family: 'Playfair Display';
 }
 h1{
     font-size: 40px;
@@ -14,6 +14,7 @@ h1{
     border: 1px solid;
     width: 350px;
     display: block;
+    height: min-content;
 }
 h2{
     margin-top: 0px;
@@ -25,7 +26,7 @@ h3{
     color: gray;
     font-weight: 400;
     font-style: italic;
-    font-size: 16.5px;
+    font-size: 15px;
     padding-left: 6px;
     padding-right: 6px;
 }
@@ -33,13 +34,18 @@ h3{
     display: flex;
     justify-content: center;
 }
-.desc{
+.desc, .buttondesc{
     border-bottom: 1px solid;
     border-color: gray;
     padding-bottom: 5px;
     margin-bottom: 0px;
     font-size: 16px;
     margin: 10px;
+}
+.buttondesc{
+    font-style: normal;
+    font-size: 14px;
+    font-family: 'Inconsolota'
 }
 a{
     display: inline-block;
@@ -61,6 +67,7 @@ p{
     color: black;
     margin: 5px;
     font-size: 19.5px;
+    display: inline-block;
 }
 a:hover{
     text-decoration: 1px underline black;
@@ -81,6 +88,7 @@ a:hover{
 .pfp{
     border-radius: 100%;
     border: 1px gray solid;
+    margin: 10px;
     width: 50px;
     height: 50px;
     background-size: cover;
@@ -99,4 +107,16 @@ a:hover{
 }
 #newsbot{
     background-image: url(worldnews.png);
+}
+.expand, .seeless{
+    background-image: url(elipses.png);
+    height: 10px;
+    background-color: rgb(236, 236, 236);
+    margin-top: 2px;
+    margin-left: 10px;
+    display: inline-block;
+}
+.seeless{
+    background-image: url(chevron.png);
+    display: none;
 }
