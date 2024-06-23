@@ -69,7 +69,7 @@ p{
     font-size: 19.5px;
     display: inline-block;
 }
-a:hover, a:hover p{{
+a:hover, a:hover p{
     text-decoration: 1px underline black;
 }
 #head{
