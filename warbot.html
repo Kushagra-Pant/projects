@@ -36,9 +36,8 @@
                 margin: 0px;
             }
             #exampleimage{
-                margin: 10px;
-                width: 300px;
-                overflow-wrap: normal;
+                width: 330px;
+                margin-top: 10px;
             }
             #exampleheader{
                 display: none;
@@ -98,11 +97,13 @@
                     <p class = "gray">&lt;optional amount&gt;</p>
                     <button class="expand" onclick="expand(this, 'Buys a certain amount of something from the store. If no amount specified, will buy 1.')"></button>
                     <button class="seeless" onclick="seeless(this)"></button>
+                    <button class="example" onclick="setexample('warbotimages/buy.png', 'Example of -buy command')"></button>
                     <h3 class="buttondesc"></h3>
     
                     <p>-shop</p>
                     <button class="expand" onclick="expand(this, 'Views the shop')"></button>
                     <button class="seeless" onclick="seeless(this)"></button>
+                    <button class="example" onclick="setexample('warbotimages/shop.png', 'Example of -shop command')"></button>
                     <h3 class="buttondesc"></h3> 
                     
                     <p>-give</p>
@@ -111,6 +112,7 @@
                     <p class = "gray">&lt;optional message&gt;</p>
                     <button class="expand" onclick="expand(this, 'Gives a nation some money, with an optional message attached')"></button>
                     <button class="seeless" onclick="seeless(this)"></button>
+                    <button class="example" onclick="setexample('warbotimages/give.png', 'Example of -give command')"></button>
                     <h3 class="buttondesc"></h3>      
                 </div>
 
@@ -118,11 +120,13 @@
                     <p>-inv</p>
                     <button class="expand" onclick="expand(this, 'When you buy something, it goes into your inventory. Use this command to view your inventory')"></button>
                     <button class="seeless" onclick="seeless(this)"></button>
+                    <button class="example" onclick="setexample('warbotimages/inv.png', 'Example of -inv command')"></button>
                     <h3 class="buttondesc"></h3>
 
                     <p>-mytroops</p>
                     <button class="expand" onclick="expand(this, 'Lists all your divisions, their id, and the amount of troops each has')"></button>
                     <button class="seeless" onclick="seeless(this)"></button>
+                    <button class="example" onclick="setexample('warbotimages/mytroops.png', 'Example of -mytroops command')"></button>
                     <h3 class="buttondesc"></h3>
 
                     <p>-map</p>
@@ -135,29 +139,35 @@
                     <p class = "gray">&lt;territory&gt;</p>
                     <button class="expand" onclick="expand(this, 'Returns the territories that the territory specified borders')"></button>
                     <button class="seeless" onclick="seeless(this)"></button>
+                    <button class="example" onclick="setexample('warbotimages/borders.png', 'Example of -borders command')"></button>
                     <h3 class="buttondesc"></h3>
 
                     <p>-bordersnat</p>
                     <p class = "gray">&lt;nation&gt;</p>
                     <button class="expand" onclick="expand(this, 'Returns the territories that the nation specified borders')"></button>
                     <button class="seeless" onclick="seeless(this)"></button>
+                    <button class="example" onclick="setexample('warbotimages/bordersnat.png', 'Example of -bordersnat command')"></button>
                     <h3 class="buttondesc"></h3>
 
                     <p>-unitinfo</p>
                     <p class = "gray">&lt;unit id&gt;</p>
                     <button class="expand" onclick="expand(this, 'Returns the information of the unit specified, including how many troops it has, which territory it\'s in, it\'s cooldown, and it\'s type')"></button>
                     <button class="seeless" onclick="seeless(this)"></button>
+                    <button class="example" onclick="setexample('warbotimages/unitinfo.png', 'Example of -unitinfo command')"></button>
                     <h3 class="buttondesc"></h3>
 
                     <p>-territories</p>
-                    <p class = "gray">&lt;unit id&gt;</p>
-                    <button class="expand" onclick="expand(this, 'Returns all the territories you own')"></button>
+                    <p class = "gray">&lt;optional nation&gt;</p>
+                    <br>
+                    <button class="expand" onclick="expand(this, 'Returns all the territories you own. If a nation is specified, it returns the territories owned by that nation')"></button>
                     <button class="seeless" onclick="seeless(this)"></button>
+                    <button class="example" onclick="setexample('warbotimages/territories.png', 'Example of -territories command')"></button>
                     <h3 class="buttondesc"></h3>
     
                     <p>-treaties</p>
                     <button class="expand" onclick="expand(this, 'Views all your current treaties, both outgoing and incoming')"></button>
                     <button class="seeless" onclick="seeless(this)"></button>
+                    <button class="example" onclick="setexample('warbotimages/treaties.png', 'Example of -treaties command')"></button>
                     <h3 class="buttondesc"></h3>
                 </div>
 
@@ -168,6 +178,7 @@
                     <p class = "gray">&lt;optional amount&gt;</p>
                     <button class="expand" onclick="expand(this, 'Mobilizes infantry to the territory specified. Type is either regular or motorized')"></button>
                     <button class="seeless" onclick="seeless(this)"></button>
+                    <button class="example" onclick="setexample('warbotimages/deploy.png', 'Examples of -deploy command')"></button>
                     <h3 class="buttondesc"></h3>                
                     
                     <p>-rename</p>
@@ -175,6 +186,7 @@
                     <p class = "gray">&lt;new name&gt;</p>
                     <button class="expand" onclick="expand(this, 'Changes the id of the specified troop')"></button>
                     <button class="seeless" onclick="seeless(this)"></button>
+                    <button class="example" onclick="setexample('warbotimages/rename.png', 'Example of -rename command')"></button>
                     <h3 class="buttondesc"></h3>
                     
                     <p>-move</p>
@@ -182,6 +194,7 @@
                     <p class = "gray">&lt;territory&gt;</p>
                     <button class="expand" onclick="expand(this, 'Moves the specified unit to the territory, if its neighbouring it')"></button>
                     <button class="seeless" onclick="seeless(this)"></button>
+                    <button class="example" onclick="setexample('warbotimages/move.png', 'Example of -move command')"></button>
                     <h3 class="buttondesc"></h3>
                     
                     <p>-split</p>
@@ -189,24 +202,29 @@
                     <p class = "gray">&lt;optional amount&gt;</p>
                     <button class="expand" onclick="expand(this, 'Splits the division into the requested amount. Each new division gets a new id and a fraction of the troops. The total troops stay the same, just divided into multiple divisions')"></button>
                     <button class="seeless" onclick="seeless(this)"></button>
+                    <button class="example" onclick="setexample('warbotimages/split.png', 'Examples of -split command')"></button>
                     <h3 class="buttondesc"></h3>
                     
                     <p>-merge</p>
                     <p class = "gray">&lt;unit ids separated by a space&gt;</p>
                     <button class="expand" onclick="expand(this, 'Merges as many of the specified divisions it can into a single division if they are in the same territory. If any of them can\'t be merged, it sends a message explaining why')"></button>
                     <button class="seeless" onclick="seeless(this)"></button>
+                    <button class="example" onclick="setexample('warbotimages/merge.png', 'Example of -merge command')"></button>
                     <h3 class="buttondesc"></h3>
                     
                     <p>-fortify</p>
                     <p class = "gray">&lt;territory&gt;</p>
                     <button class="expand" onclick="expand(this, 'Given you have a fortress (which you can buy from the shop), this command fortifies a territory, giving it boosted defense')"></button>
                     <button class="seeless" onclick="seeless(this)"></button>
+                    <button class="example" onclick="setexample('warbotimages/fortify.png', 'Example of -fortify command')"></button>
                     <h3 class="buttondesc"></h3>
                     
                     <p>-upgrade</p>
-                    <p class = "gray">&lt;territory&gt;</p>
-                    <button class="expand" onclick="expand(this, 'Increases the population and therefore tax revenue of a territory you own')"></button>
+                    <p class = "gray">&lt;"costs" or territory&gt;</p>
+                    <br>
+                    <button class="expand" onclick="expand(this, 'Increases the population and therefore tax revenue of a territory you own. If \'costs\' is specified, it returns what each territory you own costs to upgrade')"></button>
                     <button class="seeless" onclick="seeless(this)"></button>
+                    <button class="example" onclick="setexample('warbotimages/upgrade.png', 'Example of -upgrade command')"></button>
                     <h3 class="buttondesc"></h3>
                 </div>
 
@@ -215,13 +233,16 @@
                     <p class = "gray">&lt;nation&gt;</p>
                     <button class="expand" onclick="expand(this, 'If the nation exists, this command is used to declare war on them')"></button>
                     <button class="seeless" onclick="seeless(this)"></button>
+                    <button class="example" onclick="setexample('warbotimages/declarewar.png', 'Example of -declarewar command')"></button>
                     <h3 class="buttondesc"></h3>
     
                     <p>-attack</p>
                     <p class = "gray">&lt;territory&gt;</p>
-                    <p class = "gray">&lt;divisions, separated by space if multiple&gt;</p>
+                    <p class = "gray">&lt;divisions, separated by space if</p>
+                    <p class = "gray">multiple&gt;</p>
                     <button class="expand" onclick="expand(this, 'At the heart of the game, this is the command used to attack a territory of a nation you are at war with using the divisions specified. The bot immediately returns a message that declares whether you won the battle or not.')"></button>
                     <button class="seeless" onclick="seeless(this)"></button>
+                    <button class="example" onclick="setexample('warbotimages/attack.png', 'Examples of -attack command')"></button>
                     <h3 class="buttondesc"></h3>
 
                     <p>-cede</p>
@@ -229,13 +250,16 @@
                     <p class = "gray">&lt;nation&gt;</p>
                     <button class="expand" onclick="expand(this, 'Cedes a territory you own to another nation')"></button>
                     <button class="seeless" onclick="seeless(this)"></button>
+                    <button class="example" onclick="setexample('warbotimages/cede.png', 'Example of -cede command')"></button>
                     <h3 class="buttondesc"></h3>
     
                     <p>-scorch</p>
                     <p class = "gray">&lt;territory&gt;</p>
-                    <p class = "gray">&lt;divisions, separated by space if multiple&gt;</p>
+                    <p class = "gray">&lt;divisions, separated by space if</p>
+                    <p class = "gray">multiple&gt;</p>
                     <button class="expand" onclick="expand(this, 'Burns down a territory you own')"></button>
                     <button class="seeless" onclick="seeless(this)"></button>
+                    <button class="example" onclick="setexample('warbotimages/scorch.png', 'Example of -scorch command')"></button>
                     <h3 class="buttondesc"></h3>
     
                     <p>-peace</p>
@@ -243,6 +267,7 @@
                     <p class = "gray">&lt;treaty&gt;</p>
                     <button class="expand" onclick="expand(this, 'Offers a peace treaty to a nation you are at war with')"></button>
                     <button class="seeless" onclick="seeless(this)"></button>
+                    <button class="example" onclick="setexample('warbotimages/peace.png', 'Example of -peace command')"></button>
                     <h3 class="buttondesc"></h3>
                 </div>
             </div>
