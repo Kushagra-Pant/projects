@@ -10,6 +10,42 @@
             .gray{
                 color: lightslategray;
             }
+            #exception{
+                width: 1140px;
+            }
+            .category{
+                width: 280px;
+                display: inline-block;
+                border-right: gray 1px solid;
+                vertical-align: top;
+                height: fit-content;
+            }
+            #noborder{
+                border: none;
+            }
+            .small{
+                font-size: 12px;
+                font-family: 'Inconsolata';
+            }
+            .vert{
+                display: block;
+            }
+            .inline{
+                display: inline;
+                padding: 0px;
+                margin: 0px;
+            }
+            #exampleimage{
+                margin: 10px;
+                width: 300px;
+                overflow-wrap: normal;
+            }
+            #exampleheader{
+                display: none;
+                font-size: 16px;
+                font-weight: 550;
+                color: darkslateblue;
+            }
         </style>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
@@ -19,97 +55,220 @@
         <h1>War Bot</h1>
         <h3 class = "desc">Made with Python</h3>
         <div class = "container">
-            <div class = "section">
+            <div class = "section" id="exception">
                 <div class = "header">
                     <h2>Commands</h2>
                     <h3 class="desc"></h3>
                 </div>
-                <p>-register</p>
-                <p class = "gray">&lt;user&gt;</p>
-                <p class = "gray">&lt;country&gt;</p>
-                <button class="expand" onclick="expand(this, '[Admin Only] A command that set a user as ruler of a specific country')"></button>
-                <button class="seeless" onclick="seeless(this)"></button>
-                <h3 class="buttondesc"></h3>
 
-                <p>-tax</p>
-                <p class = "gray">&lt;level&gt;</p>
-                <button class="expand" onclick="expand(this, 'Tax your population at a specified level. The higher the tax, the higher the stability loss. Levels are min, mod, max, and evil.')"></button>
-                <button class="seeless" onclick="seeless(this)"></button>
-                <h3 class="buttondesc"></h3>
-                
-                <p>-buy</p>
-                <p class = "gray">&lt;item&gt;</p>
-                <p class = "gray">&lt;optional amount&gt;</p>
-                <button class="expand" onclick="expand(this, 'Buys a certain amount of something from the store. If no amount specified, will buy 1.')"></button>
-                <button class="seeless" onclick="seeless(this)"></button>
-                <h3 class="buttondesc"></h3>
-
-                <p>-shop</p>
-                <button class="expand" onclick="expand(this, 'Views the shop')"></button>
-                <button class="seeless" onclick="seeless(this)"></button>
-                <h3 class="buttondesc"></h3>
-
-                <p>-inv</p>
-                <button class="expand" onclick="expand(this, 'When you buy something, it goes into your inventory. Use this command to view your inventory')"></button>
-                <button class="seeless" onclick="seeless(this)"></button>
-                <h3 class="buttondesc"></h3>
-                
-                <p>-deploy</p>
-                <p class = "gray">&lt;type&gt;</p>
-                <p class = "gray">&lt;province&gt;</p>
-                <p class = "gray">&lt;optional amount&gt;</p>
-                <button class="expand" onclick="expand(this, 'Mobilizes infantry to the province specified. Type is either regular or motorized')"></button>
-                <button class="seeless" onclick="seeless(this)"></button>
-                <h3 class="buttondesc"></h3>
-
-                <p>-mytroops</p>
-                <button class="expand" onclick="expand(this, 'Lists all your divisions, their id, and the amount of troops each has')"></button>
-                <button class="seeless" onclick="seeless(this)"></button>
-                <h3 class="buttondesc"></h3>
-
-                <p>-rename</p>
-                <p class = "gray">&lt;unit id&gt;</p>
-                <p class = "gray">&lt;new name&gt;</p>
-                <button class="expand" onclick="expand(this, 'Changes the id of the specified troop')"></button>
-                <button class="seeless" onclick="seeless(this)"></button>
-                <h3 class="buttondesc"></h3>
-                
-                <p>-move</p>
-                <p class = "gray">&lt;unit id&gt;</p>
-                <p class = "gray">&lt;province&gt;</p>
-                <button class="expand" onclick="expand(this, 'Moves the specified unit to the province, if its neighbouring it')"></button>
-                <button class="seeless" onclick="seeless(this)"></button>
-                <h3 class="buttondesc"></h3>
-                
-                <p>-split</p>
-                <p class = "gray">&lt;unit id&gt;</p>
-                <p class = "gray">&lt;optional amount&gt;</p>
-                <button class="expand" onclick="expand(this, 'Splits the division into the requested amount. Each new division gets a new id and a fraction of the troops. The total troops stay the same, just divided into multiple divisions')"></button>
-                <button class="seeless" onclick="seeless(this)"></button>
-                <h3 class="buttondesc"></h3>
-                
-                <p>-move</p>
-                <p class = "gray">&lt;unit id&gt;</p>
-                <p class = "gray">&lt;province&gt;</p>
-                <button class="expand" onclick="expand(this, 'Moves the specified unit to the province, if its neighbouring it')"></button>
-                <button class="seeless" onclick="seeless(this)"></button>
-                <h3 class="buttondesc"></h3>
-
-                <p>-map</p>
-                <p class = "gray">&lt;optional province/nation&gt;</p>
-                <button class="expand" onclick="expand(this, 'Views a map of every country.')"></button>
-                <button class="seeless" onclick="seeless(this)"></button>
-                <h3 class="buttondesc"></h3>
-            </div>
-            
-            <div class = "section">
-                <div class = "header">
-                    <h2>Demo </h2>
-                    <h3 class="desc"></h3>
+                <div class="category" id="noborder">
+                    <h2>General Commands</h2>
+                    <h3 class="desc small" id="noborder">Monetary or Miscellanious Commands</h3>
                 </div>
-                <video width="320" height="180" controls>
-                    <source src="warbot.mp4">
-                </video>
+                <div class="category" id="noborder">
+                    <h2>Status Commands</h2>
+                    <h3 class="desc small" id="noborder">Commands that return the current state of things, but don't change anything</h3>
+                </div>
+                <div class="category" id="noborder">
+                    <h2>Modifier Commands</h2>
+                    <h3 class="desc small" id="noborder">Commands that change the state of things but don't affect other nations</h3>
+                </div>
+                <div class="category" id="noborder">
+                    <h2>War Commands</h2>
+                    <h3 class="desc small" id="noborder">Commands relating to war</h3>
+                </div>
+
+                <div class="category"> <!--GENERAL-->
+                    <p>-register</p>
+                    <p class = "gray">&lt;user&gt;</p>
+                    <p class = "gray">&lt;country&gt;</p>
+                    <button class="expand" onclick="expand(this, '[Admin Only] A command that set a user as ruler of a specific country')"></button>
+                    <button class="seeless" onclick="seeless(this)"></button>
+                    <h3 class="buttondesc"></h3>
+    
+                    <p>-tax</p>
+                    <p class = "gray">&lt;level&gt;</p>
+                    <button class="expand" onclick="expand(this, 'Tax your population at a specified level. The higher the tax, the higher the stability loss. Levels are min, mod, max, and evil.')"></button>
+                    <button class="seeless" onclick="seeless(this)"></button>
+                    <button class="example" onclick="setexample('tax.png', 'Example of -tax command')"></button>
+                    <h3 class="buttondesc"></h3>
+    
+                    <p>-buy</p>
+                    <p class = "gray">&lt;item&gt;</p>
+                    <p class = "gray">&lt;optional amount&gt;</p>
+                    <button class="expand" onclick="expand(this, 'Buys a certain amount of something from the store. If no amount specified, will buy 1.')"></button>
+                    <button class="seeless" onclick="seeless(this)"></button>
+                    <h3 class="buttondesc"></h3>
+    
+                    <p>-shop</p>
+                    <button class="expand" onclick="expand(this, 'Views the shop')"></button>
+                    <button class="seeless" onclick="seeless(this)"></button>
+                    <h3 class="buttondesc"></h3> 
+                    
+                    <p>-give</p>
+                    <p class = "gray">&lt;nation&gt;</p>
+                    <p class = "gray">&lt;money&gt;</p>
+                    <p class = "gray">&lt;optional message&gt;</p>
+                    <button class="expand" onclick="expand(this, 'Gives a nation some money, with an optional message attached')"></button>
+                    <button class="seeless" onclick="seeless(this)"></button>
+                    <h3 class="buttondesc"></h3>      
+                </div>
+
+                <div class="category"> <!--STATUS-->
+                    <p>-inv</p>
+                    <button class="expand" onclick="expand(this, 'When you buy something, it goes into your inventory. Use this command to view your inventory')"></button>
+                    <button class="seeless" onclick="seeless(this)"></button>
+                    <h3 class="buttondesc"></h3>
+
+                    <p>-mytroops</p>
+                    <button class="expand" onclick="expand(this, 'Lists all your divisions, their id, and the amount of troops each has')"></button>
+                    <button class="seeless" onclick="seeless(this)"></button>
+                    <h3 class="buttondesc"></h3>
+
+                    <p>-map</p>
+                    <p class = "gray">&lt;optional territory/nation&gt;</p>
+                    <button class="expand" onclick="expand(this, 'Views a map of every country. If a territory or nation is specified, it displays a map with just that area highlighted')"></button>
+                    <button class="seeless" onclick="seeless(this)"></button>
+                    <h3 class="buttondesc"></h3>
+
+                    <p>-borders</p>
+                    <p class = "gray">&lt;territory&gt;</p>
+                    <button class="expand" onclick="expand(this, 'Returns the territories that the territory specified borders')"></button>
+                    <button class="seeless" onclick="seeless(this)"></button>
+                    <h3 class="buttondesc"></h3>
+
+                    <p>-bordersnat</p>
+                    <p class = "gray">&lt;nation&gt;</p>
+                    <button class="expand" onclick="expand(this, 'Returns the territories that the nation specified borders')"></button>
+                    <button class="seeless" onclick="seeless(this)"></button>
+                    <h3 class="buttondesc"></h3>
+
+                    <p>-unitinfo</p>
+                    <p class = "gray">&lt;unit id&gt;</p>
+                    <button class="expand" onclick="expand(this, 'Returns the information of the unit specified, including how many troops it has, which territory it\'s in, it\'s cooldown, and it\'s type')"></button>
+                    <button class="seeless" onclick="seeless(this)"></button>
+                    <h3 class="buttondesc"></h3>
+
+                    <p>-territories</p>
+                    <p class = "gray">&lt;unit id&gt;</p>
+                    <button class="expand" onclick="expand(this, 'Returns all the territories you own')"></button>
+                    <button class="seeless" onclick="seeless(this)"></button>
+                    <h3 class="buttondesc"></h3>
+    
+                    <p>-treaties</p>
+                    <button class="expand" onclick="expand(this, 'Views all your current treaties, both outgoing and incoming')"></button>
+                    <button class="seeless" onclick="seeless(this)"></button>
+                    <h3 class="buttondesc"></h3>
+                </div>
+
+                <div class="category"> <!--MODIFIERS-->
+                    <p>-deploy</p>
+                    <p class = "gray">&lt;type&gt;</p>
+                    <p class = "gray">&lt;territory&gt;</p>
+                    <p class = "gray">&lt;optional amount&gt;</p>
+                    <button class="expand" onclick="expand(this, 'Mobilizes infantry to the territory specified. Type is either regular or motorized')"></button>
+                    <button class="seeless" onclick="seeless(this)"></button>
+                    <h3 class="buttondesc"></h3>                
+                    
+                    <p>-rename</p>
+                    <p class = "gray">&lt;unit id&gt;</p>
+                    <p class = "gray">&lt;new name&gt;</p>
+                    <button class="expand" onclick="expand(this, 'Changes the id of the specified troop')"></button>
+                    <button class="seeless" onclick="seeless(this)"></button>
+                    <h3 class="buttondesc"></h3>
+                    
+                    <p>-move</p>
+                    <p class = "gray">&lt;unit id&gt;</p>
+                    <p class = "gray">&lt;territory&gt;</p>
+                    <button class="expand" onclick="expand(this, 'Moves the specified unit to the territory, if its neighbouring it')"></button>
+                    <button class="seeless" onclick="seeless(this)"></button>
+                    <h3 class="buttondesc"></h3>
+                    
+                    <p>-split</p>
+                    <p class = "gray">&lt;unit id&gt;</p>
+                    <p class = "gray">&lt;optional amount&gt;</p>
+                    <button class="expand" onclick="expand(this, 'Splits the division into the requested amount. Each new division gets a new id and a fraction of the troops. The total troops stay the same, just divided into multiple divisions')"></button>
+                    <button class="seeless" onclick="seeless(this)"></button>
+                    <h3 class="buttondesc"></h3>
+                    
+                    <p>-merge</p>
+                    <p class = "gray">&lt;unit ids separated by a space&gt;</p>
+                    <button class="expand" onclick="expand(this, 'Merges as many of the specified divisions it can into a single division if they are in the same territory. If any of them can\'t be merged, it sends a message explaining why')"></button>
+                    <button class="seeless" onclick="seeless(this)"></button>
+                    <h3 class="buttondesc"></h3>
+                    
+                    <p>-fortify</p>
+                    <p class = "gray">&lt;territory&gt;</p>
+                    <button class="expand" onclick="expand(this, 'Given you have a fortress (which you can buy from the shop), this command fortifies a territory, giving it boosted defense')"></button>
+                    <button class="seeless" onclick="seeless(this)"></button>
+                    <h3 class="buttondesc"></h3>
+                    
+                    <p>-upgrade</p>
+                    <p class = "gray">&lt;territory&gt;</p>
+                    <button class="expand" onclick="expand(this, 'Increases the population and therefore tax revenue of a territory you own')"></button>
+                    <button class="seeless" onclick="seeless(this)"></button>
+                    <h3 class="buttondesc"></h3>
+                </div>
+
+                <div id="noborder" class="category"> <!-- WAR -->
+                    <p>-declarewar</p>
+                    <p class = "gray">&lt;nation&gt;</p>
+                    <button class="expand" onclick="expand(this, 'If the nation exists, this command is used to declare war on them')"></button>
+                    <button class="seeless" onclick="seeless(this)"></button>
+                    <h3 class="buttondesc"></h3>
+    
+                    <p>-attack</p>
+                    <p class = "gray">&lt;territory&gt;</p>
+                    <p class = "gray">&lt;divisions, separated by space if multiple&gt;</p>
+                    <button class="expand" onclick="expand(this, 'At the heart of the game, this is the command used to attack a territory of a nation you are at war with using the divisions specified. The bot immediately returns a message that declares whether you won the battle or not.')"></button>
+                    <button class="seeless" onclick="seeless(this)"></button>
+                    <h3 class="buttondesc"></h3>
+
+                    <p>-cede</p>
+                    <p class = "gray">&lt;territory&gt;</p>
+                    <p class = "gray">&lt;nation&gt;</p>
+                    <button class="expand" onclick="expand(this, 'Cedes a territory you own to another nation')"></button>
+                    <button class="seeless" onclick="seeless(this)"></button>
+                    <h3 class="buttondesc"></h3>
+    
+                    <p>-scorch</p>
+                    <p class = "gray">&lt;territory&gt;</p>
+                    <p class = "gray">&lt;divisions, separated by space if multiple&gt;</p>
+                    <button class="expand" onclick="expand(this, 'Burns down a territory you own')"></button>
+                    <button class="seeless" onclick="seeless(this)"></button>
+                    <h3 class="buttondesc"></h3>
+    
+                    <p>-peace</p>
+                    <p class = "gray">&lt;nation&gt;</p>
+                    <p class = "gray">&lt;treaty&gt;</p>
+                    <button class="expand" onclick="expand(this, 'Offers a peace treaty to a nation you are at war with')"></button>
+                    <button class="seeless" onclick="seeless(this)"></button>
+                    <h3 class="buttondesc"></h3>
+                </div>
+            </div>
+
+            <div class="container vert">
+                <div class = "section">
+                    <div class = "header">
+                        <h2>Demo </h2>
+                        <h3 class="desc"></h3>
+                    </div>
+                    <video width="320" height="180" controls>
+                        <source src="warbot.mp4">
+                    </video>
+                </div>
+
+                <div class = "section">
+                    <div class = "header">
+                        <h2>Example </h2>
+                        <h3 class="desc"></h3>
+                    </div>
+                    <h3 class="desc inline eg" id = "noborder">Click the</h3>
+                    <button class="example eg"></button>
+                    <h3 class="desc inline eg" id = "noborder">button to see an example of a command being used!</h3>
+                    <h2 id="exampleheader"></h2>
+                    <img id="exampleimage">
+                </div>
             </div>
         </div>
     </body>
