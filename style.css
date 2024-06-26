@@ -37,8 +37,7 @@ h3{
 .desc, .buttondesc{
     border-bottom: 1px solid;
     border-color: gray;
-    padding-bottom: 5px;
-    margin-bottom: 0px;
+    padding-bottom: 10px;
     font-size: 16px;
     margin: 10px;
 }
@@ -108,15 +107,21 @@ a:hover, a:hover p{
 #newsbot{
     background-image: url(worldnews.png);
 }
-.expand, .seeless{
+.expand, .seeless, .example{
     background-image: url(elipses.png);
     height: 10px;
     background-color: rgb(236, 236, 236);
     margin-top: 2px;
     margin-left: 10px;
     display: inline-block;
+    background-repeat: no-repeat;
 }
 .seeless{
     background-image: url(chevron.png);
     display: none;
+}
+.example{
+    background-image: url(example.png);
+    background-size: cover;
+    margin-left: 0;
 }
