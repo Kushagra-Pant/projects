@@ -1,0 +1,42 @@
+p{
+    margin: 0px;
+    font-size: 18px;
+}
+.gray{
+    color: lightslategray;
+}
+#exception{
+    width: 1140px;
+}
+.category{
+    width: 280px;
+    display: inline-block;
+    border-right: gray 1px solid;
+    vertical-align: top;
+    height: fit-content;
+}
+#noborder{
+    border: none;
+}
+.small{
+    font-size: 12px;
+    font-family: 'Inconsolata';
+}
+.vert{
+    display: block;
+}
+.inline{
+    display: inline;
+    padding: 0px;
+    margin: 0px;
+}
+#exampleimage{
+    width: 330px;
+    margin-top: 10px;
+}
+#exampleheader{
+    display: none;
+    font-size: 16px;
+    font-weight: 550;
+    color: darkslateblue;
+}
